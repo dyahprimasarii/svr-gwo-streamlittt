@@ -93,8 +93,7 @@ def _parse_date_flexible(date_series):
 
 
 def split_and_scale_data(X, y, test_size=0.1):
-    """Split train/test dan normalisasi dengan StandardScaler."""
-    # Split tanpa shuffle untuk time series
+    # Split tanpa shuffle
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=test_size, shuffle=False
     )
@@ -113,10 +112,14 @@ def split_and_scale_data(X, y, test_size=0.1):
         'X_test': X_test,
         'y_train': y_train,
         'y_test': y_test,
+        
+        # Data Normalized
         'X_train_scaled': X_train_scaled,
         'X_test_scaled': X_test_scaled,
         'y_train_scaled': y_train_scaled,
         'y_test_scaled': y_test_scaled,
+        
+        # Scaler
         'scaler_X': scaler_X,
         'scaler_y': scaler_y,
         'train_size': len(X_train),
