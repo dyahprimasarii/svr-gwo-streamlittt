@@ -58,14 +58,6 @@ def svr_default(X_train, y_train, X_test, y_test, scaler_y=None,
     y_train_pred = model.predict(X_train)
     y_test_pred = model.predict(X_test)
     
-    # Inverse transform jika scaler tersedia
-    if scaler_y:
-        y_train_pred, y_test_pred, y_train_actual, y_test_actual = _inverse_all(
-            scaler_y, y_train_pred, y_test_pred, y_train_flat, y_test_flat
-        )
-    else:
-        y_train_actual, y_test_actual = y_train_flat, y_test_flat
-    
     # Hitung gamma aktual
     actual_gamma = 1 / (X_train.shape[1] * X_train.var()) if gamma == 'scale' else gamma
     
