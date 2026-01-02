@@ -98,7 +98,7 @@ def split_and_scale_data(X, y, test_size=0.1):
         X, y, test_size=test_size, shuffle=False
     )
     
-    # Normalisasi
+    # Normalisasi 
     scaler_X = StandardScaler()
     scaler_y = StandardScaler()
     
@@ -113,7 +113,7 @@ def split_and_scale_data(X, y, test_size=0.1):
         'y_train': y_train,
         'y_test': y_test,
         
-        # Data Normalized
+        # DATA NORMALIZED 
         'X_train_scaled': X_train_scaled,
         'X_test_scaled': X_test_scaled,
         'y_train_scaled': y_train_scaled,
