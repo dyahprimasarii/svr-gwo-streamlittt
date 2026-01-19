@@ -27,16 +27,24 @@ st.markdown("""
     }
     .sub-header {
         font-size: 1.2rem;
-        color: #888;
+        color: #666;
         text-align: center;
         margin-bottom: 2rem;
     }
     .feature-card {
-        background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+        background: linear-gradient(135deg, #E8EAF6 0%, #C5CAE9 100%);
         padding: 1.5rem;
         border-radius: 10px;
         margin: 0.5rem 0;
         border-left: 4px solid #4F8BF9;
+    }
+    .feature-card h3 {
+        color: #1A237E;
+        margin-bottom: 0.5rem;
+    }
+    .feature-card p {
+        color: #424242;
+        margin: 0;
     }
     .stButton > button {
         width: 100%;
