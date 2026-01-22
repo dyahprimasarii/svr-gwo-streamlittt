@@ -99,8 +99,8 @@ def split_and_scale_data(X, y, test_size=0.1):
     )
     
     # Normalisasi 
-    scaler_X = StandardScaler()
-    scaler_y = StandardScaler()
+    scaler_X = MinMaxScaler()
+    scaler_y = MinMaxScaler()
     
     X_train_scaled = scaler_X.fit_transform(X_train)
     y_train_scaled = scaler_y.fit_transform(y_train.reshape(-1, 1))
